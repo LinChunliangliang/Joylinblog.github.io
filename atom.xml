@@ -5,42 +5,21 @@
   <subtitle>I want to know you more</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2019-04-17T03:53:00.326Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://linchunliangliang.github.io/"/>
+  <updated>2019-04-12T12:54:37.111Z</updated>
+  <id>https://linchunliangliang.github.io/</id>
   
   <author>
-    <name>LinChunliangliang</name>
+    <name>Shawn Lin</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>djv</title>
-    <link href="http://yoursite.com/2019/04/17/djv/"/>
-    <id>http://yoursite.com/2019/04/17/djv/</id>
-    <published>2019-04-17T03:51:08.000Z</published>
-    <updated>2019-04-17T03:53:00.326Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="I-want-to-know-you-more"><a href="#I-want-to-know-you-more" class="headerlink" title="I want to know you more"></a>I want to know you more</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;I-want-to-know-you-more&quot;&gt;&lt;a href=&quot;#I-want-to-know-you-more&quot; class=&quot;headerlink&quot; title=&quot;I want to know you more&quot;&gt;&lt;/a&gt;I want to know yo
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/04/12/hello-world/"/>
-    <id>http://yoursite.com/2019/04/12/hello-world/</id>
+    <link href="https://linchunliangliang.github.io/2019/04/12/hello-world/"/>
+    <id>https://linchunliangliang.github.io/2019/04/12/hello-world/</id>
     <published>2019-04-12T12:54:37.111Z</published>
     <updated>2019-04-12T12:54:37.111Z</updated>
     
