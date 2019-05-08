@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,脚本语言,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hello World!" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="人非草木，孰能无过">
+<meta name="keywords" content="JavaScript,脚本语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习总结一">
+<meta property="og:url" content="https://linchunliangliang.github.io/2019/05/08/JavaScript学习总结/index.html">
+<meta property="og:site_name" content="Hello World!">
+<meta property="og:description" content="人非草木，孰能无过">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-08T13:13:11.975Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript学习总结一">
+<meta name="twitter:description" content="人非草木，孰能无过">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://linchunliangliang.github.io/2019/05/08/JavaScript学习总结/">
+
+
+
+
+
+  <title>JavaScript学习总结一 | Hello World!</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!-- 设置git -->
+    <a href="https://github.com/LinChunliangliang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hello World!</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I want to know you more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linchunliangliang.github.io/2019/05/08/JavaScript学习总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shawn Lin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript学习总结一</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-08T18:46:11+08:00">
+                2019-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>人非草木，孰能无过</p>
+<a id="more"></a>
+<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="简单介绍咯"><a href="#简单介绍咯" class="headerlink" title="简单介绍咯"></a>简单介绍咯</h2><p>​    是一个轻量级，基于对象，事件驱动，客户端脚本语言，其严格区分大小写</p>
+<h2 id="字符串相关函数"><a href="#字符串相关函数" class="headerlink" title="字符串相关函数"></a>字符串相关函数</h2><p><code>parseInt()</code>在一个字符串中从左向右提取整数，直到遇到第一个非数字旧结束提取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> price=<span class="string">"100元"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(price))  <span class="comment">//结果是100</span></span><br></pre></td></tr></table></figure>
+<p><code>parseFloat()</code>在一个字符串中从左向右提取小数</p>
+<p><code>isNaN()</code>判断一个字符串是不是有纯数字组成，如果是返回<code>true</code>否则则返回<code>false</code></p>
+<h2 id="数组元素操作"><a href="#数组元素操作" class="headerlink" title="数组元素操作"></a>数组元素操作</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>push()</td>
+<td>在数组的尾部 加入一个元素</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>在数组的尾部 移除一个元素</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>在数组的头部 移除一个元素</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td>在数组的头部 添加一个元素</td>
+</tr>
+<tr>
+<td>splice(x,y)</td>
+<td>根据索引删除数组元素,splice(x要删除的索引,y要删除的个数)</td>
+</tr>
+<tr>
+<td>join()</td>
+<td><code>arr.join(&#39;&#39;)</code>把数组的元素联合成字符串</td>
+</tr>
+<tr>
+<td>split()</td>
+<td><code>arr.split(&#39;&#39;)</code>把字符串中的每个字符拆分为数组元素</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>翻转，把数组元素的顺序反转过来</td>
+</tr>
+</tbody>
+</table>
+<h2 id="相关操作运算符"><a href="#相关操作运算符" class="headerlink" title="相关操作运算符"></a>相关操作运算符</h2><table>
+<thead>
+<tr>
+<th>操作符分类</th>
+<th style="text-align:right">操作符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>算术运算符</td>
+<td style="text-align:right">+</td>
+<td>(加法)将两个数相加</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">-</td>
+<td>(求相反数，减法)作为相反数操作符时返回操作数的相反数，作为二进制操作符时将两个操作数相减</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">*</td>
+<td>(乘法)将两个数相乘</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">/</td>
+<td>(除法)将两个数相除</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">%</td>
+<td>(求余)求两个数相除的余数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">++</td>
+<td>(自增)将表示数值(不能是字符串)的变量加1(可以返回旧值或新值)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">–</td>
+<td>(自减)将表示数值(不能是字符串)的变量减1(可以返回旧值或新值)</td>
+</tr>
+<tr>
+<td>字符串操作符</td>
+<td style="text-align:right">+</td>
+<td>(字符串连接运算符)将两个字符串连接，参与运算的操作数只要有一个是字符串就进行字符串连接运算</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">+=</td>
+<td>链接两个字符串，并将结果赋给第一个(左边)字符串</td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td style="text-align:right">==</td>
+<td>如果两边的操作数相等则返回布尔true(真)  否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">!=</td>
+<td>如果两边的操作数不相等则返回布尔true(真) 否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;</td>
+<td>如果左边的操作数大于右边的操作数则返回布尔true(真) 否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&lt;</td>
+<td>如果左边的操作数小于右边的操作数则返回布尔true(真) 否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;=</td>
+<td>如果左边的操作数大于等于右边的操作数则返回布尔true(真) 否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&lt;=</td>
+<td>如果左边的操作数小于等于右边的操作数则返回布尔true(真) 否则返回布尔false(假)</td>
+</tr>
+<tr>
+<td>逻辑运算符</td>
+<td style="text-align:right">&amp;&amp;</td>
+<td>(逻辑与)如果两个操作数都为真则返回真 否则返回假</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">\</td>
+<td>\</td>
+<td></td>
+<td>(逻辑或)如果两个操作数都为假则返回真 否则返回假</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">!</td>
+<td>(逻辑非)如果操作数为真则返回假 否则返回真</td>
+</tr>
+<tr>
+<td>位运算符</td>
+<td style="text-align:right">&amp;</td>
+<td>(按位与)如果操作数的对应位(二进制中的位)都为1，则该位返回1，否则该位返回0</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">｜</td>
+<td>(按位或) 如果操作数的对应位(二进制中的位)都为0，则该位返回0，否则该位返回1</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">^</td>
+<td>(按位异或) 如果操作数的对应位(二进制中的位)只有一个1，则该位返回1，否则该位返回0</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">~</td>
+<td>(取反)反转操作数的每一位</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&lt;&lt;</td>
+<td>(左移)将第一个操作数的二进制形式的每一位向左移，所移的位数由第二个操作数指定，右面的空位补’0’</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;&gt;</td>
+<td>(算术右移) 将第一个操作数的二进制形式的每一位向右移，所移的位数由第二个操作数指定，忽略被移出的位(也就是最高位前不进行添补)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;&gt;&gt;</td>
+<td>(逻辑右移) 将第一个操作数的二进制形式的每一位向右移，所移的位数由第二个操作数指定，忽略被移出的位，左面空位补’0’</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td style="text-align:right">=</td>
+<td>将第二个操作数的值赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">+=</td>
+<td>将两个操作数相加，并将和赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">-=</td>
+<td>将两个操作数相减，并将差赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">*=</td>
+<td>将两个操作数相乘，并将积赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">/=</td>
+<td>将两个操作数相除，并将商赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">%=</td>
+<td>计算两个操作数相除的余数，并将余数赋给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&amp;=</td>
+<td>执行按位与，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">\</td>
+<td>=</td>
+<td>执行按位或，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">^=</td>
+<td>执行按位异或，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&lt;&lt;=</td>
+<td>执行左移，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;&gt;=</td>
+<td>执行算术右移，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">&gt;&gt;&gt;=</td>
+<td>执行逻辑右移，并将结果赋值给第一个操作数</td>
+</tr>
+<tr>
+<td>特殊运算符</td>
+<td style="text-align:right">？：</td>
+<td>示例：condition?exp1:exp2 如果condition为真则返回exp1，否则返回exp2   (执行一个简单的if… else语句)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">delete</td>
+<td>清除数组中某个元素的值，或删除对象中的一个属性</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">new</td>
+<td>(实例化一个对象)创建一个用户自定义对象的类型或内建对象的类型实例</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">this</td>
+<td>可用于引用当前对象的关键字</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">typeof</td>
+<td>返回一个字符串，表明操作数的类型</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">void</td>
+<td>该操作符指定了要计算一个表达式但不返回值</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right"><strong>.</strong></td>
+<td>(读写操作符)用于调用对象的属性或方法，或重写对象的属性或方法</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">[]</td>
+<td>(读写操作符)用于读书数组中的元素值</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:right">,</td>
+<td>计算两个表达式，并返回第二个表达式的值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>###普通函数</p>
+<p><code>function demo()</code>定义普通函数</p>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p><code>var fn=function ()</code>定义匿名函数，并且保存到变量fn中，留作以后使用</p>
+<p><code>(function(){})()</code>匿名函数的自调用</p>
+<p>匿名函数也可以传参</p>
+<p>在绑定事件时经常需要用到匿名函数</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>​    作用域指的是，变量可以被引用的范围，不同作用域下声明的变量可引用的范围不同。</p>
+<p>​    在全局作用域声明的变量叫全局变量，在局部作用域下声明的变量称为局部变量</p>
+<h3 id="作用域链的原则"><a href="#作用域链的原则" class="headerlink" title="作用域链的原则"></a>作用域链的原则</h3><ol>
+<li>当试图引用一个变量时需要遵循作用域链原则。尝试引用一个变量时，先在当前作用域寻找该变量的声明语句var 变量名,如果有直接使用该变量</li>
+<li>如果没找到，继续向上一级作用域寻找var声明语句。如果有，直接使用</li>
+<li>如果还是没有，继续向上一级作用域寻找var声明语句。如果有，直接使用</li>
+<li>周而复始，如果找到全局作用域还是没有，系统会自动地，隐式创建该变量的声明语句</li>
+</ol>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>​    闭包主要解决跨函数 引用变量的问题，低级作用域可以引用高级作用域的变量 高级作用域不能引用低级作用域的变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i=<span class="string">'局部变量'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a()()   <span class="comment">//这样就解决了，最里面的函数的的方法也可以在外面调用，</span></span><br></pre></td></tr></table></figure>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归就是函数在内部调用自己</p>
+<p><strong>主要用于解决，一个大的事件拆分成小事件，但是大小事件的解决方式都一样，这样的特殊事件就可以用递归解决</strong></p>
+<p>一个简单的递归</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(num)</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    count(--num)</span><br><span class="line">&#125;</span><br><span class="line">count(<span class="number">10</span>)  <span class="comment">//利用递归输出10-1</span></span><br></pre></td></tr></table></figure>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><p>以下相关操作只是比较常用的相关操作，还有很多相关操作</p>
+<p>###查询元素</p>
+<ol>
+<li><p>根据ID获取元素</p>
+<p><code>document.getElementById()</code></p>
+</li>
+<li><p>根据标签名获取元素</p>
+<p><code>document.getElementsByTagName()</code></p>
+</li>
+<li><p>根据class获取元素</p>
+<p><code>document.getElementsByClassName()</code></p>
+</li>
+<li><p>根据name获取元素</p>
+<p><code>document.getElementsByName()</code></p>
+</li>
+</ol>
+<h3 id="增加元素"><a href="#增加元素" class="headerlink" title="增加元素"></a>增加元素</h3><ol>
+<li><p>创建新元素</p>
+<p><code>document.createElement(标签名)</code></p>
+</li>
+<li><p>追加到父元素内容尾部</p>
+<p><code>父元素.appendChild(子元素)</code></p>
+</li>
+<li><p>新元素追加到某个旧元素的前面</p>
+<p><code>父元素.insertBefore(新元素,旧元素)</code></p>
+</li>
+</ol>
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><ol>
+<li><p>删除父元素的子元素</p>
+<p><code>父元素.removeChild(子元素)</code></p>
+</li>
+</ol>
+<h3 id="替换元素"><a href="#替换元素" class="headerlink" title="替换元素"></a>替换元素</h3><ol>
+<li><p>新元素替换旧元素</p>
+<p><code>父元素.replaceChild(新元素,旧元素)</code></p>
+</li>
+</ol>
+<h2 id="事件编程"><a href="#事件编程" class="headerlink" title="事件编程"></a>事件编程</h2><h3 id="常用的事件类型"><a href="#常用的事件类型" class="headerlink" title="常用的事件类型"></a>常用的事件类型</h3><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onclick</td>
+<td>单击事件</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>鼠标按下</td>
+</tr>
+<tr>
+<td>onmouseup</td>
+<td>鼠标抬起</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标悬浮</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标移动</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标离开某个区域</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>按键按下</td>
+</tr>
+<tr>
+<td>onkeyup</td>
+<td>按键抬起</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>用户点击进入文本框时触发的事</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>失去焦点事件</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>下拉选框选项发生改变时触发的事件</td>
+</tr>
+<tr>
+<td>onsubmit</td>
+<td>在表单提交时触发的事件</td>
+</tr>
+<tr>
+<td>oninput</td>
+<td>在用户输入信息时触发的事件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="延时器和定时器"><a href="#延时器和定时器" class="headerlink" title="延时器和定时器"></a>延时器和定时器</h3><p>延时器只是在一段时间后执行某个事件，只执行一次</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id=setTimeout(XXX,<span class="number">5000</span>)</span><br><span class="line">clearTimeout(id)</span><br></pre></td></tr></table></figure>
+<p>定时器是没隔一段时间做某事</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id=setInterval(XXX,<span class="number">5000</span>)</span><br><span class="line">clearInterval(id)</span><br></pre></td></tr></table></figure>
+<h3 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h3><p>​    如果用动态绑定 无法给同一个网页元素 多次绑定同一个类型的事件</p>
+<p>​      事件监听允许我们给同一个网页元素 的 同一种事件类型 绑定多个处理程序</p>
+<p>IE和w3c在事件监听中存在兼容性问题，以下封装解决</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEvent</span>(<span class="params">dom,type,callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//判断当前浏览器支持那种方法</span></span><br><span class="line">    <span class="keyword">if</span>(dom.addEventListener)&#123;</span><br><span class="line">        <span class="comment">//w3c内核</span></span><br><span class="line">        dom.addEventListener(type,callback)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//IE内核</span></span><br><span class="line">        dom.attachEvent(type,callback)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="event事件对象"><a href="#event事件对象" class="headerlink" title="event事件对象"></a>event事件对象</h3><p>​    event事件对象 在事件触发时 系统会自动产生的一个临时对象</p>
+<p>​    event事件对象会保存与当前事件类型密切相关的重要数据</p>
+<h3 id="事件冒泡与阻止事件冒泡"><a href="#事件冒泡与阻止事件冒泡" class="headerlink" title="事件冒泡与阻止事件冒泡"></a>事件冒泡与阻止事件冒泡</h3><p>​    用户的一个行为 可能同时触发多个元素的多个事件</p>
+<p>​    阻止事件冒泡</p>
+<p>​              W3C内核:</p>
+<p>​                     event事件对象.stopPropagation()</p>
+<p>​              IE内核:</p>
+<p>​                     window.event.cancelBubble = true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopBubble</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//确保event中有事件对象，保证后续代码不会出错</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.event)&#123;</span><br><span class="line">        event=<span class="built_in">window</span>.event</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(event.stopPropagatio)&#123;</span><br><span class="line">        event.stopPropagatio()</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        event.cancelBubble = tru</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="页面载入事件"><a href="#页面载入事件" class="headerlink" title="页面载入事件"></a>页面载入事件</h3><p><code>window.onload</code>是页面载入事件 在页面加载完毕后才触发的事</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Shawn Lin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://linchunliangliang.github.io/2019/05/08/JavaScript学习总结/" title="JavaScript学习总结一">https://linchunliangliang.github.io/2019/05/08/JavaScript学习总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+            <a href="/tags/脚本语言/" rel="tag"><i class="fa fa-tag"></i> 脚本语言</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/01/VUE前端框架/" rel="next" title="VUE前端框架">
+                <i class="fa fa-chevron-left"></i> VUE前端框架
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Shawn Lin">
+            
+              <p class="site-author-name" itemprop="name">Shawn Lin</p>
+              <p class="site-description motion-element" itemprop="description">这世界的美好需要用心去体会！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/LinChunliangliang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:linlinqwer898@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/2528223797/home?wvr=5" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://webstack.cc/" title="webstack" target="_blank">webstack</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍咯"><span class="nav-number">1.1.</span> <span class="nav-text">简单介绍咯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串相关函数"><span class="nav-number">1.2.</span> <span class="nav-text">字符串相关函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组元素操作"><span class="nav-number">1.3.</span> <span class="nav-text">数组元素操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关操作运算符"><span class="nav-number">1.4.</span> <span class="nav-text">相关操作运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.5.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名函数"><span class="nav-number">1.5.1.</span> <span class="nav-text">匿名函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">1.6.</span> <span class="nav-text">作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域链的原则"><span class="nav-number">1.6.1.</span> <span class="nav-text">作用域链的原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.7.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">1.8.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM操作"><span class="nav-number">1.9.</span> <span class="nav-text">DOM操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加元素"><span class="nav-number">1.9.1.</span> <span class="nav-text">增加元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除元素"><span class="nav-number">1.9.2.</span> <span class="nav-text">删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替换元素"><span class="nav-number">1.9.3.</span> <span class="nav-text">替换元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件编程"><span class="nav-number">1.10.</span> <span class="nav-text">事件编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的事件类型"><span class="nav-number">1.10.1.</span> <span class="nav-text">常用的事件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延时器和定时器"><span class="nav-number">1.10.2.</span> <span class="nav-text">延时器和定时器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件监听"><span class="nav-number">1.10.3.</span> <span class="nav-text">事件监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event事件对象"><span class="nav-number">1.10.4.</span> <span class="nav-text">event事件对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件冒泡与阻止事件冒泡"><span class="nav-number">1.10.5.</span> <span class="nav-text">事件冒泡与阻止事件冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面载入事件"><span class="nav-number">1.10.6.</span> <span class="nav-text">页面载入事件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-id"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shawn Lin</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">9.4k</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+</body>
+</html>
