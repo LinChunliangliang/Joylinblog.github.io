@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -125,19 +132,19 @@
 
 
 
-<meta name="description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  常用的相关方法###文本操作 代码相关操作 英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+c 12345&amp;lt;html&amp;gt;     &amp;lt;body&amp;gt;">
+<meta name="description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  ##文本操作 加粗文本 斜体文本 下划线操作  引用快捷键  option+command+q ##代码相关操作  英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+">
 <meta name="keywords" content="Blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World!">
 <meta property="og:url" content="https://linchunliangliang.github.io/2019/04/23/Typora笔记/index.html">
 <meta property="og:site_name" content="Hello World!">
-<meta property="og:description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  常用的相关方法###文本操作 代码相关操作 英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+c 12345&amp;lt;html&amp;gt;     &amp;lt;body&amp;gt;">
+<meta property="og:description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  ##文本操作 加粗文本 斜体文本 下划线操作  引用快捷键  option+command+q ##代码相关操作  英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://linchunliangliang.github.io/Users/linchunliang/blog/source/images/image-20190423105833362.jpg">
-<meta property="og:updated_time" content="2019-04-30T07:34:53.638Z">
+<meta property="og:updated_time" content="2019-05-08T00:40:23.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World!">
-<meta name="twitter:description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  常用的相关方法###文本操作 代码相关操作 英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+c 12345&amp;lt;html&amp;gt;     &amp;lt;body&amp;gt;">
+<meta name="twitter:description" content="#Typora学习笔记 简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。  ##文本操作 加粗文本 斜体文本 下划线操作  引用快捷键  option+command+q ##代码相关操作  英文状态下，三个`即可创建代码框，可以在右下角选择代码语言， 也可以输入三个`后，直接写相关语言 快捷键option+command+">
 <meta name="twitter:image" content="https://linchunliangliang.github.io/Users/linchunliang/blog/source/images/image-20190423105833362.jpg">
 
 
@@ -148,7 +155,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -193,6 +200,8 @@
 
 
 
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -244,29 +253,59 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
           </a>
         </li>
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-rss">
-          <a href="/atom.xml" rel="section">
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
-            RSS
+            站点地图
           </a>
         </li>
       
@@ -354,6 +393,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  454
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -372,12 +442,19 @@
       
         <p>#Typora学习笔记</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 </p>
-<h2 id="常用的相关方法"><a href="#常用的相关方法" class="headerlink" title="常用的相关方法"></a>常用的相关方法</h2><p>###文本操作</p>
-<h3 id="代码相关操作"><a href="#代码相关操作" class="headerlink" title="代码相关操作"></a>代码相关操作</h3><p> 英文状态下，三个`即可创建代码框，可以在右下角选择代码语言，</p>
+<p>##文本操作</p>
+<p><strong>加粗文本</strong></p>
+<p><em>斜体文本</em></p>
+<p><u>下划线操作</u></p>
+<p> 引用快捷键</p>
+<p> option+command+q</p>
+<p>##代码相关操作</p>
+<p> 英文状态下，三个`即可创建代码框，可以在右下角选择代码语言，</p>
 <p>也可以输入三个`后，直接写相关语言</p>
 <p><strong>快捷键option+command+c</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">         ........</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="表格相关操作"><a href="#表格相关操作" class="headerlink" title="表格相关操作"></a>表格相关操作</h3><p>创建表格方法</p>
+<p>##表格相关操作</p>
+<p>创建表格方法</p>
 <p>|表头1|表头2|表头3|输入完前面内容后，按回车键即可创建表格，之后可以在表格的左上角进行相关表格的设置</p>
 <p><strong>option+command+t 快捷键创建表格</strong></p>
 <table>
@@ -396,22 +473,28 @@
 </tr>
 </tbody>
 </table>
-<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p><code>- []</code>未完成事件，中间的空格别忘记</p>
+<p>##复选框</p>
+<p><code>- []</code>未完成事件，中间的空格别忘记</p>
 <p><code>- [x]</code>已完成事件</p>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 未完成事件</li>
 <li style="list-style: none"><input type="checkbox" checked> 已完成事件</li>
 </ul>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h4><p>输入一对中括号，后面跟一对括号，括号里面填写链接地址，即可添加超链接 快捷键command+k</p>
+<p>##链接</p>
+<p>###超链接</p>
+<p>输入一对中括号，后面跟一对括号，括号里面填写链接地址，即可添加超链接 快捷键command+k</p>
 <p>这里需要<a href="https://www.baidu.com" target="_blank" rel="noopener">相关操作</a> </p>
 <p>####链接 </p>
 <p>尖括号包含着的就是链接 </p>
 <p> <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
-<h3 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h3><p>英文状态下:后面跟相关表情英文即可</p>
+<p>##表情</p>
+<p>英文状态下:后面跟相关表情英文即可</p>
 <p>:happy:</p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>复制后直接快捷键粘贴</p>
+<p>##图片</p>
+<p>复制后直接快捷键粘贴</p>
 <p><img src="/Users/linchunliang/blog/source/images/image-20190423105833362.jpg" alt="image-20190423105833362"></p>
-<h3 id="相关快捷键"><a href="#相关快捷键" class="headerlink" title="相关快捷键"></a>相关快捷键</h3><p>这里需要<strong>相关操作</strong>     command+b 加粗</p>
+<p>##相关快捷键</p>
+<p>这里需要<strong>相关操作</strong>     command+b 加粗</p>
 <p>这里需要<!--相关操作--> control+-  注释</p>
 <p>单行代码shift+command+`</p>
 <p>command+数字 可以快捷创建标题</p>
@@ -430,6 +513,24 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Shawn Lin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://linchunliangliang.github.io/2019/04/23/Typora笔记/" title>https://linchunliangliang.github.io/2019/04/23/Typora笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -528,7 +629,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
@@ -557,19 +658,19 @@
                   <span class="links-of-author-item">
                     <a href="https://github.com/LinChunliangliang" target="_blank" title="GitHub">
                       
-                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="mailto:linlinqwer898@gmail.com" target="_blank" title="E-Mail">
                       
-                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="https://weibo.com/u/2528223797/home?wvr=5" target="_blank" title="微博">
                       
-                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
                   </span>
                 
             </div>
@@ -579,6 +680,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://webstack.cc/" title="webstack" target="_blank">webstack</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -596,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的相关方法"><span class="nav-number">2.</span> <span class="nav-text">常用的相关方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码相关操作"><span class="nav-number">2.1.</span> <span class="nav-text">代码相关操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格相关操作"><span class="nav-number">2.2.</span> <span class="nav-text">表格相关操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复选框"><span class="nav-number">2.3.</span> <span class="nav-text">复选框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-number">2.4.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#超链接"><span class="nav-number">2.4.1.</span> <span class="nav-text">超链接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表情"><span class="nav-number">2.5.</span> <span class="nav-text">表情</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">2.6.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关快捷键"><span class="nav-number">2.7.</span> <span class="nav-text">相关快捷键</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
             
 
           </div>
@@ -619,25 +734,24 @@
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-id"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Shawn Lin</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">6.8k</span>
+  
 </div>
 
 
-  <div class="powered-by">
-  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-    本站访客数:<span id="busuanzi_value_site_uv"></span>
-  </span>
-  </div>
-  
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
 
@@ -661,6 +775,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
