@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linchunliangliang.github.io/"/>
-  <updated>2019-05-08T13:13:11.975Z</updated>
+  <updated>2019-05-11T11:55:03.865Z</updated>
   <id>https://linchunliangliang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript学习总结2</title>
+    <link href="https://linchunliangliang.github.io/2019/05/10/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
+    <id>https://linchunliangliang.github.io/2019/05/10/JavaScript学习笔记2/</id>
+    <published>2019-05-10T00:22:03.000Z</published>
+    <updated>2019-05-11T11:55:03.865Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一切皆对象&lt;/p&gt;
+&lt;p&gt;JS两链一包&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://linchunliangliang.github.io/tags/JavaScript/"/>
+    
+      <category term="脚本语言" scheme="https://linchunliangliang.github.io/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript学习总结一</title>
