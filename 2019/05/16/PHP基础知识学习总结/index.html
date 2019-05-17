@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,脚本语言,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hello World!" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="keywords" content="JavaScript,脚本语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP基础知识学习总结">
+<meta property="og:url" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/index.html">
+<meta property="og:site_name" content="Hello World!">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/com.jpg">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/01.png">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/02.png">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/03.png">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/04.png">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/05.png">
+<meta property="og:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/06.png">
+<meta property="og:updated_time" content="2019-05-17T00:46:53.141Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP基础知识学习总结">
+<meta name="twitter:image" content="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/com.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/">
+
+
+
+
+
+  <title>PHP基础知识学习总结 | Hello World!</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!-- 设置git -->
+    <a href="https://github.com/LinChunliangliang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hello World!</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I want to know you more</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-history"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shawn Lin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP基础知识学习总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-16T15:37:47+08:00">
+                2019-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2019/05/16/PHP基础知识学习总结/com.jpg" title="Ajax">
+<a id="more"></a>
+<h1 id="PHP基础知识点梳理"><a href="#PHP基础知识点梳理" class="headerlink" title="PHP基础知识点梳理"></a>PHP基础知识点梳理</h1><h2 id="脚本运行"><a href="#脚本运行" class="headerlink" title="脚本运行"></a>脚本运行</h2><p>###PHP脚本的运行方式 </p>
+<ol>
+<li>CLI模式，在系统的命令中执行PHP脚本</li>
+<li>Apache内置模块：通过浏览器访问apache，由apache读取并运行php脚本</li>
+<li>FastCGI模式：一般在配置Nginx时使用，能够提高更好的并发性能</li>
+<li>PHP内置Web服务器</li>
+</ol>
+<p>###MAC版搭建Apache模块运行php脚本</p>
+<ol>
+<li><p>可选择一个一个软件安装（需要配置环境，有点复杂），所以为了快捷，也可以选择集成环境安装，例如：mamp或者xampp（windows系统可以安装phpStudy）</p>
+</li>
+<li><p>因为我是安装了mamp pro，所以我这里介绍一下安装mamp的相关介绍</p>
+</li>
+<li><p>mamp pro是一个要序列号的软件，如果没有序列号，会有15天的试用期，这里我找到一个破解版：<a href="http://www.sdifen.com/mamppro411.html" target="_blank" rel="noopener">http://www.sdifen.com/mamppro411.html</a> 详情访问网站即可</p>
+</li>
+<li><p>安装完成后图标会多一个鲨鱼</p>
+</li>
+<li><p>完成后页面</p>
+<img src="/2019/05/16/PHP基础知识学习总结/01.png" title="安装后首页">
+</li>
+<li><p>安装完成后需要进行配置</p>
+<ol>
+<li><p>第一步</p>
+<img src="/2019/05/16/PHP基础知识学习总结/02.png" title="第一步">
+<p>添加一个新的配置</p>
+</li>
+<li><p>第二步</p>
+<img src="/2019/05/16/PHP基础知识学习总结/03.png" title="第二步">
+<p>在Host name里填写你想要通过什么网址访问你的脚本，并且选择你的项目文件目录</p>
+</li>
+<li><p>第三步</p>
+<img src="/2019/05/16/PHP基础知识学习总结/04.png" title="第三步">
+<p>在Port里填写80端口</p>
+</li>
+<li><p>第四步</p>
+<img src="/2019/05/16/PHP基础知识学习总结/05.png" title="第四步">
+<p>启动服务</p>
+</li>
+<li><p>在浏览器通过你设置的网址访问你的脚本，如果是index.php脚本文件，网址后面可以不用写脚本名称，如果不是index.php命名的需要在网址后面加<code>/脚本名称.php</code>即可访问脚本</p>
+</li>
+<li><p>配置完成</p>
+</li>
+</ol>
+</li>
+<li><p>后期有新的项目方法一样配置</p>
+</li>
+</ol>
+<p>###CLI 模式</p>
+<p>命令行中使用：<code>php 脚本名</code></p>
+<p>###PHP内置Web模块</p>
+<p>语法：<code>php -S localhost:绑定的端口号 [-t 网站根目录] [路由文件]</code></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h3><p>常量一般命名规范使用大写 ，并且常量不能被修改</p>
+<p>定义方式</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define (<span class="string">'PI'</span>,<span class="number">3.141592654</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="string">'PI'</span>=<span class="number">3.141592654</span>;</span><br></pre></td></tr></table></figure>
+<p>常量的定义<code>$名称=值</code></p>
+<h3 id="系统常量"><a href="#系统常量" class="headerlink" title="系统常量"></a>系统常量</h3><p>完整常量列表参见手册<a href="https://www.php.net/manual/zh/reserved.constants.php" target="_blank" rel="noopener">https://www.php.net/manual/zh/reserved.constants.php</a></p>
+<h3 id="魔术常量"><a href="#魔术常量" class="headerlink" title="魔术常量"></a>魔术常量</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LINE</strong></td>
+<td>常量所在文件的行数</td>
+</tr>
+<tr>
+<td><strong>FILE</strong></td>
+<td>文件的完整路径和文件名</td>
+</tr>
+<tr>
+<td><strong>DIR</strong></td>
+<td>文件所在的目录</td>
+</tr>
+<tr>
+<td><strong>FUNCTION</strong></td>
+<td>函数名称</td>
+</tr>
+<tr>
+<td><strong>CLASS</strong></td>
+<td>类的名称</td>
+</tr>
+<tr>
+<td><strong>TRAIT</strong></td>
+<td>Trait的名称</td>
+</tr>
+<tr>
+<td><strong>METHOD</strong></td>
+<td>类方法的名称</td>
+</tr>
+<tr>
+<td><strong>NAMESPACE</strong></td>
+<td>命名空间的名称</td>
+</tr>
+</tbody>
+</table>
+<h3 id="预定义常量"><a href="#预定义常量" class="headerlink" title="预定义常量"></a>预定义常量</h3><img src="/2019/05/16/PHP基础知识学习总结/06.png" title="预定义常量">
+<h3 id="变量的传值"><a href="#变量的传值" class="headerlink" title="变量的传值"></a>变量的传值</h3><p>我们可以把一个变量的值传给另一个变量，在传值时有两种情况：<code>值传递</code> 和 <code>引用传递</code>。</p>
+<p>值传递：把一个变量的值在内存中复制一份给另一个变量。（类似于克隆）</p>
+<p>引用传递：把一个变量在内存中的地址给另一个变量，两个变量实际上操作同一块内存。（类似于起个别名）</p>
+<p>值传递：值传递直接使用 <code>=</code> 即可</p>
+<p>引用传递：引用传递时在变量名前使用 <code>&amp;</code> 符号，获取变量在内存中的地址（简单说就是修改一个的值，会改变另外一个的值）</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer（整数）</td>
+<td>如：1，2，3，4，5，100，-12，34，0等</td>
+</tr>
+<tr>
+<td>float（浮点型）</td>
+<td>就是小数，如：1.34，-34.54，324.544，0.435等</td>
+</tr>
+<tr>
+<td>boolean（布尔）</td>
+<td>只有两个值：TRUE 和 FALSE 。 true ：真  false：假 应用场景：当需要表示一件事是真或者是假两种情况时使用 比如，一个人是否满18岁？是否已经登录？账户余额是否充足？</td>
+</tr>
+<tr>
+<td>NULL（无类型）</td>
+<td>只有一个值：NULL，代表空、没有。 应用场景：在定义一个变量时，如果无法马上确定它的 值和类型，这时可以先设置它的值为 NULL， 代表 “这个变量此时还没有值 ，但以后会有”</td>
+</tr>
+<tr>
+<td>string（字符串）</td>
+<td>就是一串字符的组合，字符串要用（单\</td>
+<td>双）引用引起来。 如：’abc’，”学习PHP的日子”，’adf23$#fda..;/fdewo’，’1234’ ‘null’，”TRUE” 等 注意：使用单引用和双引用是有区别的。 应用场景：商品名称、商品属性、账号、文章标题、文章内容等</td>
+</tr>
+<tr>
+<td>array（数组）</td>
+<td>就是一组数据。数组使用中括号括起来。如：[“苹果” , “香蕉” , “梨” , “菠萝”] 数组分为一维数组和多维数组。 多维数组是指：数组中的值又是一个数组的数组</td>
+</tr>
+<tr>
+<td>object（对象）</td>
+<td>一种更高级的数据结构，可以表示世界万物，面向对象编程时再讲。</td>
+</tr>
+<tr>
+<td>resource（资源）</td>
+<td>用来保存 PHP 语言之外的资源，如：打开一张图片 、打开一个目录、建立数据库的连接等。</td>
+</tr>
+<tr>
+<td>callable（可调用）</td>
+<td>用来保存一个函数。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>字符串单引号和双引号的区别：单引号不解析，双引号解析</strong></p>
+<p>数组有索引数组和关联数组</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>算术运算符</td>
+<td>+、-、<em>、/（除）、%（取模）、**（指数）。 如：5%3=2、10%2=0，2 </em> <em> 3 =8，2 </em> <em> 10 = 1024，3 </em> * 3 = 27。</td>
+</tr>
+<tr>
+<td>字符串运算符</td>
+<td>.（连接两个字符串）</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>=、+=、*=、/=、%=、**=、.=</td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td>、=、!=、&lt;&gt;（不等）、!==、&lt;（小于）、&gt;、&lt;=（小于等于）、&gt;=</td>
+</tr>
+<tr>
+<td>错误抵制符</td>
+<td>@：隐藏错误信息，致命性错误显示(中止脚本执行的错误，比如少写了;)</td>
+</tr>
+<tr>
+<td>递增递减运算符</td>
+<td>++（前加加）、a++（后加加）、–（前减减）、a–（后减减）</td>
+</tr>
+<tr>
+<td>逻辑运算符</td>
+<td>&amp;&amp;（与）、\</td>
+<td>\</td>
+<td>（或）、!（非）、and（与）、or（或)、xor(异或)</td>
+</tr>
+<tr>
+<td>位运算符</td>
+<td>二进制运算符。 &amp;（与)、\</td>
+<td>（或)、~（取反）、^（异或）、&lt;&lt;（左移）、&gt;&gt;（右移）</td>
+</tr>
+<tr>
+<td>三目运算符</td>
+<td>? :</td>
+</tr>
+</tbody>
+</table>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>if</td>
+<td>分支语句</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>多向分支</td>
+</tr>
+<tr>
+<td>while</td>
+<td>循环语句</td>
+</tr>
+<tr>
+<td>for</td>
+<td>循环语句</td>
+</tr>
+<tr>
+<td>do-while</td>
+<td>循环语句，现循环一次再判断</td>
+</tr>
+<tr>
+<td>foreach</td>
+<td>遍历数组<strong>foreach($arr as $v)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>跳出多层循环<strong>break 2</strong></p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span><span class="params">($x, $y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> $x + $y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参数可以设置默认值，但是需要后面的参数连续设置</p>
+<p>全局变量不能再函数内直接使用，需要用<code>$GLOBLAS</code>来引用</p>
+<h3 id="一个递归函数"><a href="#一个递归函数" class="headerlink" title="一个递归函数"></a>一个递归函数</h3><p>一个递归函数实现删除一个指定的目录</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cleanDir</span><span class="params">($dir)</span></span>&#123;</span><br><span class="line">    <span class="comment">//打开一个目录</span></span><br><span class="line">    $od=opendir($dir);</span><br><span class="line">    <span class="comment">//循环读取目录中的每个文件夹名字</span></span><br><span class="line">    <span class="keyword">while</span>($filename=readdir($od))&#123;</span><br><span class="line">        <span class="comment">//每个文件夹下面有两个特殊文件  .和.. 跳过这两个</span></span><br><span class="line">        <span class="keyword">if</span>($filename==<span class="string">'.'</span>||$filename==<span class="string">'..'</span>)&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断是否是文件，如果是文件就删除，如果是目录就继续</span></span><br><span class="line">        <span class="comment">//拼出这个子目录的路径</span></span><br><span class="line">        $path=$dir.<span class="string">'/'</span>.$filename;</span><br><span class="line">        <span class="comment">//判断是文件还是目录</span></span><br><span class="line">        <span class="keyword">if</span>(is_dir($path))&#123;</span><br><span class="line">            cleanDir($path);  <span class="comment">//递归</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            unlink($path);     <span class="comment">//删除文件</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//关闭这个目录</span></span><br><span class="line">    closedir($od);</span><br><span class="line">    <span class="comment">//删除目录</span></span><br><span class="line">    rmdir($dir);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h3><h4 id="输出打印"><a href="#输出打印" class="headerlink" title="输出打印"></a>输出打印</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>echo</td>
+<td>输出字符串</td>
+</tr>
+<tr>
+<td>var_dump</td>
+<td>打印数据详细信息，主要在调试程序时使用</td>
+</tr>
+<tr>
+<td>print_r</td>
+<td>打印数组</td>
+</tr>
+<tr>
+<td>print</td>
+<td>打印输出</td>
+</tr>
+</tbody>
+</table>
+<h4 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max</td>
+<td>从多个数中取出最大的</td>
+</tr>
+<tr>
+<td>min</td>
+<td>从多个数中取出最小的</td>
+</tr>
+<tr>
+<td>mt_rand</td>
+<td>得到一个随机数，更加随机一些，替代 rand，(和它算法不同)[推荐使用]</td>
+</tr>
+<tr>
+<td>rand</td>
+<td>得到一个随机数</td>
+</tr>
+<tr>
+<td>ceil</td>
+<td>向上取整 ， ceil(12.1)    // 13</td>
+</tr>
+<tr>
+<td>floor</td>
+<td>向下取整   floor(12.1)     // 12</td>
+</tr>
+<tr>
+<td>abs</td>
+<td>取绝对值</td>
+</tr>
+</tbody>
+</table>
+<h4 id="时间函数"><a href="#时间函数" class="headerlink" title="时间函数"></a>时间函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td>获取当前时间戳，秒</td>
+</tr>
+<tr>
+<td>mirotime</td>
+<td>获取当前时间戳，微秒</td>
+</tr>
+<tr>
+<td>strtotime</td>
+<td>将英文文本日期时间解析为 Unix 时间戳</td>
+</tr>
+<tr>
+<td>date</td>
+<td>格式化时间戳</td>
+</tr>
+</tbody>
+</table>
+<h4 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strlen</td>
+<td>获取字符串长度</td>
+</tr>
+<tr>
+<td>trim</td>
+<td>去掉字符串两边空格</td>
+</tr>
+<tr>
+<td>strpos</td>
+<td>查找一个字符在字符串中的位置</td>
+</tr>
+<tr>
+<td>strrpos</td>
+<td>从后面查找一个字符在字符串中的位置</td>
+</tr>
+<tr>
+<td>ucfirst</td>
+<td>字符串首字母缩写</td>
+</tr>
+<tr>
+<td>strtoupper</td>
+<td>所有字母大写</td>
+</tr>
+<tr>
+<td>strtolower</td>
+<td>所有字母小写</td>
+</tr>
+<tr>
+<td>str_repeat</td>
+<td>重复一个字符n次</td>
+</tr>
+<tr>
+<td>str_replace</td>
+<td>字符串替换</td>
+</tr>
+<tr>
+<td>strstr</td>
+<td>查找字符串首次出现</td>
+</tr>
+<tr>
+<td>strrchr</td>
+<td>查找指定字符串最后出现</td>
+</tr>
+<tr>
+<td>substr</td>
+<td>字符串截取</td>
+</tr>
+<tr>
+<td>implode</td>
+<td>数组转成字符串</td>
+</tr>
+<tr>
+<td>explode</td>
+<td>字符串转成数组</td>
+</tr>
+</tbody>
+</table>
+<p>mb扩展函数</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mb_substr</td>
+<td>截取字符串</td>
+</tr>
+<tr>
+<td>mb_convert_encoding</td>
+<td>字符串转编码</td>
+</tr>
+</tbody>
+</table>
+<h4 id="数组函数"><a href="#数组函数" class="headerlink" title="数组函数"></a>数组函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>计算数组中元素个数</td>
+</tr>
+<tr>
+<td>in_array</td>
+<td>判断数组中是否存在某个值</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>数组中根据值排序</td>
+</tr>
+<tr>
+<td>ksort</td>
+<td>数组中根据键排序</td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>数组中元素乱序</td>
+</tr>
+<tr>
+<td>array_values</td>
+<td>把数组中的值取出来构造新的数组</td>
+</tr>
+<tr>
+<td>array_keys</td>
+<td>把数组中的键取出来构造新的数组</td>
+</tr>
+<tr>
+<td>array_push</td>
+<td>向数组中最后添加一个值</td>
+</tr>
+<tr>
+<td>array_pop</td>
+<td>从数组中最后取出一个值</td>
+</tr>
+<tr>
+<td>array_shift</td>
+<td>从数组开头取出一个值</td>
+</tr>
+<tr>
+<td>array_unshift</td>
+<td>向数组开头放一个值</td>
+</tr>
+</tbody>
+</table>
+<h4 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is_int</td>
+<td>判断是否是整数</td>
+</tr>
+<tr>
+<td>is_array</td>
+<td>判断是否是数组</td>
+</tr>
+<tr>
+<td>is_bool</td>
+<td>判断是否是布尔</td>
+</tr>
+<tr>
+<td>is_string</td>
+<td>判断是否是字符串</td>
+</tr>
+</tbody>
+</table>
+<h4 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exit</td>
+<td>停止程序</td>
+</tr>
+<tr>
+<td>die</td>
+<td>停止程序</td>
+</tr>
+<tr>
+<td>sleep</td>
+<td>程序暂停，单位秒</td>
+</tr>
+<tr>
+<td>unset</td>
+<td>删除一个变量</td>
+</tr>
+<tr>
+<td>issset</td>
+<td>判断一个变量是否已经定义</td>
+</tr>
+<tr>
+<td>empty</td>
+<td>判断一个变量的值是否为空</td>
+</tr>
+<tr>
+<td>uniqid</td>
+<td>生成一个唯一随机的字符串</td>
+</tr>
+</tbody>
+</table>
+<h4 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h4><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>include</td>
+<td>包含文件，包含失败时程序可以继续执行，包含错误只是警告</td>
+</tr>
+<tr>
+<td>include_once</td>
+<td>同一个文件包含多次时，只包含一次，包含错误是致命性错误</td>
+</tr>
+<tr>
+<td>require</td>
+<td>包含文件，包含失败时程序无法继续执行</td>
+</tr>
+<tr>
+<td>require_once</td>
+<td>同一个文件包含多次时，只包含一次</td>
+</tr>
+</tbody>
+</table>
+<h4 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdir</td>
+<td>创建新目录</td>
+</tr>
+<tr>
+<td>opendir</td>
+<td>打开一个目录</td>
+</tr>
+<tr>
+<td>readdir</td>
+<td>读取打开的目录中的一个文件</td>
+</tr>
+<tr>
+<td>scandir</td>
+<td>列出指定路径中的文件和目录</td>
+</tr>
+<tr>
+<td>closedir</td>
+<td>关闭一个目录</td>
+</tr>
+<tr>
+<td>is_dir</td>
+<td>判断是否是一个目录</td>
+</tr>
+<tr>
+<td>is_file</td>
+<td>判断是否是一个文件</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除一个非空目录</td>
+</tr>
+<tr>
+<td>unlink</td>
+<td>删除一个文件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is_dir</td>
+<td>判断是否是一个目录</td>
+</tr>
+<tr>
+<td>is_file</td>
+<td>判断是否是一个文件</td>
+</tr>
+<tr>
+<td>fopen</td>
+<td>打开一个文件（打开模式可以设置）</td>
+</tr>
+<tr>
+<td>fwrite</td>
+<td>向一个文件中写</td>
+</tr>
+<tr>
+<td>fread</td>
+<td>读取文件中的内容</td>
+</tr>
+<tr>
+<td>fgets</td>
+<td>从一个打开文件中读取一行</td>
+</tr>
+<tr>
+<td>file_exists</td>
+<td>判断一个文件是否存在</td>
+</tr>
+<tr>
+<td>fclose</td>
+<td>关闭一个打开的文件</td>
+</tr>
+<tr>
+<td>unlink</td>
+<td>删除一个文件</td>
+</tr>
+<tr>
+<td>filesize</td>
+<td>获取一个文件的尺寸</td>
+</tr>
+<tr>
+<td>feof</td>
+<td>判断文件指针是否已经到文件结尾</td>
+</tr>
+<tr>
+<td>file_get_contents</td>
+<td>读入一个文件中所有的内容（小文件时使用）</td>
+</tr>
+<tr>
+<td>file_put_contents</td>
+<td>向一个文件中写数据</td>
+</tr>
+</tbody>
+</table>
+<h4 id="表单上传"><a href="#表单上传" class="headerlink" title="表单上传"></a>表单上传</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$_GET</td>
+<td>接收表单get传的值</td>
+</tr>
+<tr>
+<td>$_POST</td>
+<td>接收表单post传的值</td>
+</tr>
+<tr>
+<td>$_FILES</td>
+<td>接收文件类型</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>封装上传函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">uploads</span><span class="params">($name, $dir, $allowSize = <span class="number">2</span>, $allowType = [<span class="string">'image/png'</span>, <span class="string">'image/jpg'</span>, <span class="string">'image/jpeg'</span>, <span class="string">'image/pjpeg'</span>, <span class="string">'image/gif'</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 判断有没有上传失败</span></span><br><span class="line">    <span class="keyword">if</span>($_FILES[$name][<span class="string">'error'</span>] == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 2. 判断尺寸不能超过(2M)</span></span><br><span class="line">        <span class="keyword">if</span>($_FILES[$name][<span class="string">'size'</span>] &lt; <span class="number">1024</span>*<span class="number">1024</span>*$allowSize)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 3. 限制类型，只允许上传： png,jpg,gif</span></span><br><span class="line">            <span class="keyword">if</span>(in_array($_FILES[$name][<span class="string">'type'</span>], $allowType))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 4. 先创建今日的目录</span></span><br><span class="line">                $date = date(<span class="string">'Ymd'</span>);   <span class="comment">// 获取今天的日期</span></span><br><span class="line">                $dir = <span class="string">'./uploads/'</span>.$dir.<span class="string">'/'</span>.$date;  <span class="comment">// 先拼出目录的名字</span></span><br><span class="line">                <span class="comment">// 如果不是目录就创建</span></span><br><span class="line">                <span class="keyword">if</span>(!is_dir($dir))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 0777：在 Linux 系统上，要设置这个目录可写的权限</span></span><br><span class="line">                    <span class="comment">// true: 创建多级目录时要设置为 true</span></span><br><span class="line">                    mkdir($dir, <span class="number">0777</span>, <span class="keyword">TRUE</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 5. 生成一个唯一随机的名字</span></span><br><span class="line">                $newName = uniqid();    <span class="comment">// 生成一个随机唯一的字符串 ,  fdasf;jkpew32ewdsa</span></span><br><span class="line">                <span class="comment">// 从原来的名字中取出扩展名</span></span><br><span class="line">                $ext = strrchr($_FILES[$name][<span class="string">'name'</span>], <span class="string">'.'</span>);     <span class="comment">// .jpg</span></span><br><span class="line">                <span class="comment">// 拼出新的名字</span></span><br><span class="line">                $newName .= $ext;</span><br><span class="line">                <span class="comment">// 6. 移动图片</span></span><br><span class="line">                move_uploaded_file($_FILES[$name][<span class="string">'tmp_name'</span>], $dir . <span class="string">'/'</span> . $newName);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 7. 返回 数组</span></span><br><span class="line">                <span class="keyword">return</span> [</span><br><span class="line">                    <span class="string">'ok'</span> =&gt; <span class="number">1</span>,</span><br><span class="line">                    <span class="string">'data'</span> =&gt; $dir . <span class="string">'/'</span> . $newName,</span><br><span class="line">                ];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> [</span><br><span class="line">                    <span class="string">'ok'</span> =&gt; <span class="number">0</span>,</span><br><span class="line">                    <span class="string">'data'</span> =&gt; <span class="string">'上传文件的格式不允许！'</span>,</span><br><span class="line">                ];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> [</span><br><span class="line">                <span class="string">'ok'</span> =&gt; <span class="number">0</span>,</span><br><span class="line">                <span class="string">'data'</span> =&gt; <span class="string">'上传尺寸不能超过'</span>. $allowSize . <span class="string">'M！'</span>,</span><br><span class="line">            ];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            <span class="string">'ok'</span> =&gt; <span class="number">0</span>,</span><br><span class="line">            <span class="string">'data'</span> =&gt; <span class="string">'上传过程中失败！'</span>,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的使用方法</span></span><br><span class="line">$ret = uploads(<span class="string">'file'</span>, <span class="string">'avatar'</span>);</span><br><span class="line"><span class="keyword">if</span>($ret[<span class="string">'ok'</span>] == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'上传成功！上传之后的路径：'</span>.$ret[<span class="string">'data'</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'上传失败！原因：'</span>.$ret[<span class="string">'data'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Shawn Lin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/" title="PHP基础知识学习总结">https://linchunliangliang.github.io/2019/05/16/PHP基础知识学习总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+            <a href="/tags/脚本语言/" rel="tag"><i class="fa fa-tag"></i> 脚本语言</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/10/JavaScript学习笔记2/" rel="next" title="JavaScript学习总结2">
+                <i class="fa fa-chevron-left"></i> JavaScript学习总结2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Shawn Lin">
+            
+              <p class="site-author-name" itemprop="name">Shawn Lin</p>
+              <p class="site-description motion-element" itemprop="description">这世界的美好需要用心去体会！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/LinChunliangliang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:linlinqwer898@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/2528223797/home?wvr=5" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://webstack.cc/" title="webstack" target="_blank">webstack</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP基础知识点梳理"><span class="nav-number">1.</span> <span class="nav-text">PHP基础知识点梳理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本运行"><span class="nav-number">1.1.</span> <span class="nav-text">脚本运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常量和变量"><span class="nav-number">1.2.1.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统常量"><span class="nav-number">1.2.2.</span> <span class="nav-text">系统常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#魔术常量"><span class="nav-number">1.2.3.</span> <span class="nav-text">魔术常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预定义常量"><span class="nav-number">1.2.4.</span> <span class="nav-text">预定义常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的传值"><span class="nav-number">1.2.5.</span> <span class="nav-text">变量的传值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">1.2.6.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">1.2.7.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程控制"><span class="nav-number">1.2.8.</span> <span class="nav-text">流程控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个递归函数"><span class="nav-number">1.3.1.</span> <span class="nav-text">一个递归函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内置函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">内置函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输出打印"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">输出打印</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">数学函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">时间函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">字符串函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">数组函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型判断"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">类型判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他函数"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">其他函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件包含"><span class="nav-number">1.3.2.8.</span> <span class="nav-text">文件包含</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录操作"><span class="nav-number">1.3.2.9.</span> <span class="nav-text">目录操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件操作"><span class="nav-number">1.3.2.10.</span> <span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单上传"><span class="nav-number">1.3.2.11.</span> <span class="nav-text">表单上传</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-id"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shawn Lin</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">13.1k</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+</body>
+</html>
