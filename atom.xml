@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linchunliangliang.github.io/"/>
-  <updated>2019-05-24T00:16:41.061Z</updated>
+  <updated>2019-05-24T00:26:43.041Z</updated>
   <id>https://linchunliangliang.github.io/</id>
   
   <author>
@@ -21,16 +21,11 @@
     <link href="https://linchunliangliang.github.io/2019/05/18/MySQL%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     <id>https://linchunliangliang.github.io/2019/05/18/MySQL常用指令/</id>
     <published>2019-05-18T12:35:28.000Z</published>
-    <updated>2019-05-24T00:16:41.061Z</updated>
+    <updated>2019-05-24T00:26:43.041Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;MySQL&quot;&gt;&lt;a href=&quot;#MySQL&quot; class=&quot;headerlink&quot; title=&quot;MySQL&quot;&gt;&lt;/a&gt;MySQL&lt;/h1&gt;&lt;h2 id=&quot;SQL语句&quot;&gt;&lt;a href=&quot;#SQL语句&quot; class=&quot;hea
-      
+      &lt;p&gt;数据库MySQL&lt;/p&gt;
     
     </summary>
     
@@ -165,11 +160,11 @@
     <link href="https://linchunliangliang.github.io/2019/04/24/Ajax/"/>
     <id>https://linchunliangliang.github.io/2019/04/24/Ajax/</id>
     <published>2019-04-24T08:10:03.000Z</published>
-    <updated>2019-05-08T06:49:58.644Z</updated>
+    <updated>2019-05-24T00:21:25.053Z</updated>
     
     <summary type="html">
     
-      &lt;img src=&quot;/2019/04/24/Ajax/com.jpg&quot; title=&quot;Ajax&quot;&gt;
+      &lt;img src=&quot;/2019/04/24/Ajax/com.jpg&quot;&gt;
     
     </summary>
     
