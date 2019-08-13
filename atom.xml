@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://LinChunliangliang.github.io/"/>
-  <updated>2019-08-10T11:56:19.790Z</updated>
+  <updated>2019-08-13T13:24:05.870Z</updated>
   <id>https://LinChunliangliang.github.io/</id>
   
   <author>
@@ -15,6 +15,116 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>会话管理</title>
+    <link href="https://LinChunliangliang.github.io/2019/04/13/%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/"/>
+    <id>https://LinChunliangliang.github.io/2019/04/13/会话管理/</id>
+    <published>2019-04-13T13:22:52.000Z</published>
+    <updated>2019-08-13T13:24:05.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;会话管理&quot;&gt;&lt;a href=&quot;#会话管理&quot; class=&quot;headerlink&quot; title=&quot;会话管理&quot;&gt;&lt;/a&gt;会话管理&lt;/h1&gt;&lt;p&gt;http每次请求都是握手/挥手,第二次和第一次请求时没有任何关联的,属于无状态协议,那么
+      
+    
+    </summary>
+    
+      <category term="网络协议" scheme="https://LinChunliangliang.github.io/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+    
+      <category term="SESSION" scheme="https://LinChunliangliang.github.io/tags/SESSION/"/>
+    
+      <category term="Cookie" scheme="https://LinChunliangliang.github.io/tags/Cookie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络协议</title>
+    <link href="https://LinChunliangliang.github.io/2019/03/13/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    <id>https://LinChunliangliang.github.io/2019/03/13/网络协议/</id>
+    <published>2019-03-13T13:20:58.000Z</published>
+    <updated>2019-08-13T13:22:21.806Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;网络协议&quot;&gt;&lt;a href=&quot;#网络协议&quot; class=&quot;headerlink&quot; title=&quot;网络协议&quot;&gt;&lt;/a&gt;网络协议&lt;/h1&gt;&lt;p&gt;网络协议是计算机中进行数据交换而建立的规则，标准或约定的集合，所以所有计算机等网络设备都
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://LinChunliangliang.github.io/categories/PHP/"/>
+    
+    
+      <category term="网络协议" scheme="https://LinChunliangliang.github.io/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+      <category term="TCP" scheme="https://LinChunliangliang.github.io/tags/TCP/"/>
+    
+      <category term="UDP" scheme="https://LinChunliangliang.github.io/tags/UDP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://LinChunliangliang.github.io/2018/08/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://LinChunliangliang.github.io/2018/08/13/正则表达式/</id>
+    <published>2018-08-13T13:18:42.000Z</published>
+    <updated>2019-08-13T13:20:31.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://LinChunliangliang.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://LinChunliangliang.github.io/tags/PHP/"/>
+    
+      <category term="ThinkPhp" scheme="https://LinChunliangliang.github.io/tags/ThinkPhp/"/>
+    
+      <category term="框架" scheme="https://LinChunliangliang.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThinkPhp</title>
+    <link href="https://LinChunliangliang.github.io/2018/06/17/ThinkPhp/"/>
+    <id>https://LinChunliangliang.github.io/2018/06/17/ThinkPhp/</id>
+    <published>2018-06-17T02:01:39.000Z</published>
+    <updated>2019-08-13T13:20:17.880Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;TP框架&quot;&gt;&lt;a href=&quot;#TP框架&quot; class=&quot;headerlink&quot; title=&quot;TP框架&quot;&gt;&lt;/a&gt;TP框架&lt;/h1&gt;&lt;p&gt;官网：&lt;a href=&quot;http://www.thinkphp.cn/&quot; target=
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://LinChunliangliang.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://LinChunliangliang.github.io/tags/PHP/"/>
+    
+      <category term="ThinkPhp" scheme="https://LinChunliangliang.github.io/tags/ThinkPhp/"/>
+    
+      <category term="框架" scheme="https://LinChunliangliang.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Ajax通信</title>
@@ -32,9 +142,9 @@
       <category term="PHP" scheme="https://LinChunliangliang.github.io/categories/PHP/"/>
     
     
-      <category term="Ajax" scheme="https://LinChunliangliang.github.io/tags/Ajax/"/>
-    
       <category term="PHP" scheme="https://LinChunliangliang.github.io/tags/PHP/"/>
+    
+      <category term="Ajax" scheme="https://LinChunliangliang.github.io/tags/Ajax/"/>
     
       <category term="前端" scheme="https://LinChunliangliang.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
